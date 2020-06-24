@@ -4,22 +4,23 @@ class Statically {
     glue = "Epoxy";
     jello = "Jello";
     constructor() {
-    this.glue
-    this.jello
+        this.glue
+        this.jello
     }
 
-    static moveAndShake() {
-        return "Never stagnate in life.  Be agile, change, and improve...";
+    moveAndShake() {
+        console.log("Never stagnate in life.  Be agile, change, and improve...");
     }
 
-    static stubborn() {
+    stubborn() {
         this.moveAndShake();
-        return "Please don't make me change... I just don't like it...";
+        console.log("Please don't make me change... I just don't like it...");
     }
 
-    static explain() {
-        stubborn();
-        return this.glue;
+    explain() {
+        this.stubborn();
+        console.log(this.glue);
+        console.log("static keyword defines a static method for a class.")
         //write an explanation for how the keyword static behaves differently in javascript vs. java.
     }
 
